@@ -388,4 +388,39 @@ body {
 
 </body>
 </html>
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .logo {
+    height: 70px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .contact-wrapper,
+  .property-grid,
+  .apply-form,
+  .apply-message-box {
+    width: 100% !important;
+    max-width: 95% !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .slideshow-text h1 {
+    font-size: 2rem;
+  }
+
+  .slideshow-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
 
