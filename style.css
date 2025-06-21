@@ -1,0 +1,391 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: 
+    url('https://www.transparenttextures.com/patterns/black-linen.png'),
+    linear-gradient(to bottom right, #003366, #004d40);
+  background-blend-mode: overlay;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* transparent navy feel */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 20;
+}
+
+/* Logo container (optional white background box) */
+.logo-container {
+  background-color: clear:
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo {
+  height: 110px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: green;
+}
+
+/* SLIDESHOW */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+/* Arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.3s ease;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.fade {
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* TEXT OVER SLIDESHOW */
+.slideshow-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 15;
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.slideshow-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.slideshow-text p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.slideshow-text .btn {
+  background-color: #00a86b;
+  padding: 0.7rem 1.7rem;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.slideshow-text .btn:hover {
+  background-color: #00784c;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* APPLY PAGE */
+.apply-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.apply-form {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.apply-form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.apply-form input,
+.apply-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+.apply-form input:focus,
+.apply-form textarea:focus {
+  box-shadow: 0 0 5px #00a86b;
+}
+
+.apply-form button.btn {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  border-radius: 30px;
+  background-color: #00a86b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-form button.btn:hover {
+  background-color: #00784c;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background:
+    url('https://www.transparenttextures.com/patterns/cubes.png'),
+    linear-gradient(to bottom right, #005c3c, #002d62);
+  background-blend-mode: overlay;
+  color: #fff;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | NAW Investment</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        url('https://www.transparenttextures.com/patterns/cubes.png'),
+        linear-gradient(to bottom right, #005c3c, #002d62);
+      background-blend-mode: overlay;
+      color: #fff;
+    }
+
+    .contact-page {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-info {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 1rem;
+    }
+
+    .contact-info a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: none;
+      margin-top: 0.25rem;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      box-shadow: 0 0 5px #00a86b;
+    }
+
+    .contact-form .btn {
+      margin-top: 1.5rem;
+      width: 100%;
+      background-color: #00a86b;
+      color: white;
+      border-radius: 30px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form .btn:hover {
+      background-color: #00784c;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="NAW Investment Logo" class="logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <h1 class="page-title">Get in Touch</h1>
+
+    <div class="contact-wrapper">
+
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> <a href="mailto:nawinvest.nola@gmail.com">nawinvest.nola@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:5042353368">(504) 235-3368</a></p>
+      </div>
+
+      <form class="contact-form">
+        <label for="contact-name">Full Name</label>
+        <input type="text" id="contact-name" placeholder="Your name" required>
+
+        <label for="contact-email">Email Address</label>
+        <input type="email" id="contact-email" placeholder="you@example.com" required>
+
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" rows="4" placeholder="How can we help you?" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NAW Investment. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
